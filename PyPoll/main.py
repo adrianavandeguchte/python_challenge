@@ -16,7 +16,7 @@ otooley=0
 # opens the resource file and sets to read
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile,delimiter=",")
-    next(csvreader, None)
+    header = next(csvreader, None) # skips and stores header row
 
     # loops through all the rows in the reader
     for row in csvreader:
